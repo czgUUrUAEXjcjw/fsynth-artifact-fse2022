@@ -2,10 +2,6 @@
 
 Artifact repository
 
-## Inbrowser playground
-
-We have set up an in-browser playground with both `ddmax` and `fsynth` algorithms [here](https://czguuruaexjcjw.github.io/fsynth-artifact-fse2022/playground/lab/index.html).
-
 ## How to build and run the project
 
 To build the docker image, clone this repository and run
