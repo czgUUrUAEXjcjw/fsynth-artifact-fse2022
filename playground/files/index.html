@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>JupyterLite Demo | jlite</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="JupyterLite Demo" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://vrthra.github.io/jlite/files/" />
+<meta property="og:url" content="https://vrthra.github.io/jlite/files/" />
+<meta property="og:site_name" content="jlite" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="JupyterLite Demo" />
+<script type="application/ld+json">
+{"url":"https://vrthra.github.io/jlite/files/","@type":"WebPage","headline":"JupyterLite Demo","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/jlite/assets/css/style.css?v=8c57c68c46258a14b52107134b5a021d9950135e">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/jlite/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://vrthra.github.io/jlite/">jlite</a></h1>
+      
+
+      <h1 id="jupyterlite-demo">JupyterLite Demo</h1>
+
+<p>JupyterLite deployed as a static site to GitHub Pages, for demo purposes.</p>
+
+<h2 id="-try-it-in-your-browser-">✨ Try it in your browser ✨</h2>
+
+<p>➡️ <strong>https://jupyterlite.github.io/demo</strong></p>
+
+<p><img src="https://user-images.githubusercontent.com/591645/120649478-18258400-c47d-11eb-80e5-185e52ff2702.gif" alt="github-pages" /></p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>JupyterLite is being tested against modern web browsers:</p>
+
+<ul>
+  <li>Firefox 90+</li>
+  <li>Chromium 89+</li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>This repository provides a demonstration of how to:</p>
+
+<ul>
+  <li>build a JupyterLite release using prebuilt JupyterLite assets that bundles a collection of pre-existing Jupyter notebooks as part of the distribution;</li>
+  <li>deploy the release to GitHub Pages.</li>
+</ul>
+
+<p>The process is automated using Github Actions.</p>
+
+<p>You can use this repository in two main ways:</p>
+
+<ul>
+  <li>generate a new repository from this template repository and build and deploy your own site to the corresponding Github Pages site;</li>
+  <li>build a release from a PR made to this repository and download the release from the created GitHub Actions artifact.</li>
+</ul>
+
+<h3 id="co-opting-this-repository-to-build-a-distribution">Co-opting This Repository to Build a Distribution</h3>
+
+<p><em>Requires Github account.</em></p>
+
+<p>To use this repository to build your own release:</p>
+
+<ul>
+  <li>create a fork of this repository by clicking on one of the files (such as <a href="https://github.com/jupyterlite/demo/blob/main/requirements.txt"><code class="language-plaintext highlighter-rouge">requirements.txt</code></a> and then click on the <em>edit</em> button to create your own fork of the repository;</li>
+  <li>update the <code class="language-plaintext highlighter-rouge">requirements.txt</code> file as required (or just cancel the edit if you were simply forking the original repository);</li>
+  <li>remove unwanted notebooks from the <code class="language-plaintext highlighter-rouge">contents</code> directory;</li>
+  <li>upload your own notebooks intended for release to that directory;</li>
+  <li>from the <em>Pull Requests</em> tab of your Github repository, make a pull request of the changes you made back to the main <code class="language-plaintext highlighter-rouge">jupyterlite-demo</code> repository.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/82988/132512423-ac5609b7-3e8e-4ea9-80ba-ddb08c9ffebb.png" alt="" /></p>
+
+<p>The PR will trigger a build on the repository. Go to the <a href="https://github.com/jupyterlite/demo/actions">Actions tab</a> and find the build triggered by your pull request. When the build has completed, the release will be available as a generated asset.</p>
+
+<p><img src="https://user-images.githubusercontent.com/82988/132511258-aff31973-d7e2-4e39-89d5-3feb0ced139b.png" alt="" /></p>
+
+<p>Download the distribution/generated asset and unzip it, for example into a directory of the form <code class="language-plaintext highlighter-rouge">jupyterlite-demo dist 46</code>. The directory contains your JupyterLite distribution. To run the distribution via a web browser, it needs to be served by a web server.</p>
+
+<p>If you have Python installed, on the command line change directory into the the unzipped distribution folder and run the command: <code class="language-plaintext highlighter-rouge">python -m http.server</code>. This will launch a web server from the directory, for example on port 8000. View the website in your browser (for example, at the web location <code class="language-plaintext highlighter-rouge">http://localhost:8000</code>).</p>
+
+<h3 id="using-your-own-repository-to-build-a-release-and-deploy-it-to-github-pages">Using Your Own Repository to Build a Release and Deploy it to Github Pages</h3>
+
+<p><em>Requires Github account.</em></p>
+
+<p>Click on “Use this template” to generate a repository of your own from this template:</p>
+
+<p><img src="https://user-images.githubusercontent.com/21197331/125816904-5768008a-77de-4cb3-8013-f3999b135c02.gif" alt="template" /></p>
+
+<p>From the <a href="./actions"><em>Actions</em></a> tab on your repository, ensure that workflows are enabled. When you make a commit to the <code class="language-plaintext highlighter-rouge">main</code> branch, a Github Action will run to build your JupoyterLite release and deploy it to the repository’s Github Pages site. By default, the Github Pages site will be found at <code class="language-plaintext highlighter-rouge">YOUR_GITHUB_USERNAME.github.io/YOUR_REPOSITORY-NAME</code>. <em>You can also check the URL from the Repository <code class="language-plaintext highlighter-rouge">Settings</code> tab <code class="language-plaintext highlighter-rouge">Pages</code> menu item.</em></p>
+
+<p><strong>Add any additional requirements as required to the <code class="language-plaintext highlighter-rouge">requirements.txt</code> file.</strong></p>
+
+<p><em>You can do this via the Github website by selecting the <code class="language-plaintext highlighter-rouge">requirements.txt</code> file, clicking to edit it, making the required changes then saving (“committing”) the result to the <code class="language-plaintext highlighter-rouge">main</code> branch of your repository.</em></p>
+
+<p><strong>Modify the contents of the <code class="language-plaintext highlighter-rouge">contents</code> folder to include the notebooks you want to distribute as part of your distribution.</strong></p>
+
+<p><em>You can do this by clicking on the <code class="language-plaintext highlighter-rouge">contents</code> directory and dragging notebooks from your desktop onto the contents listing. Wait for the files to be uploaded and then save them (“commit” them) to the <code class="language-plaintext highlighter-rouge">main</code> branch of the repository.</em></p>
+
+<p>Check that you have Github Pages enabled for your repository: from your repository <a href="./settings"><em>Settings</em></a> tab, select the <a href="./settings/pages"><em>Pages</em></a> menu item and ensure that the source is set to <code class="language-plaintext highlighter-rouge">gh-pages</code>.</p>
+
+<p>When you commit a file, an updated release will be built and published on the Github Pages site. Note that it may take a few minutes for the Github Pages site to be updated. Do a hard refresh on your Github Pages site in your web browser to see the new release.</p>
+
+<h3 id="further-information-and-updates">Further Information and Updates</h3>
+
+<p>For more info, keep an eye on the JupyterLite documentation:</p>
+
+<ul>
+  <li>Configuring: https://jupyterlite.readthedocs.io/en/latest/configuring.html</li>
+  <li>Deploying: https://jupyterlite.readthedocs.io/en/latest/deploying.html</li>
+</ul>
+
+<h3 id="deploy-a-new-version-of-jupyterlite">Deploy a new version of JupyterLite</h3>
+
+<p>To change the version of the prebuilt JupyterLite assets, update the <code class="language-plaintext highlighter-rouge">jupyterlite</code> package version in the <a href="./blob/main/requirements.txt">requirements.txt</a> file.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">requirements.txt</code> file can also be used to add extra prebuilt (“federated”) JupyterLab extensions to the deployed JupyterLite website.</p>
+
+<p>Commit and push any changes. The site will be deployed on the next push to the <code class="language-plaintext highlighter-rouge">main</code> branch.</p>
+
+<h2 id="development">Development</h2>
+
+<p>Create a new environment:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mamba create <span class="nt">-n</span> jupyterlite-demo
+conda activate jupyterlite-demo
+pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div></div>
+
+<p>Then follow the steps documented in the <a href="https://jupyterlite.readthedocs.io/en/latest/configuring.html">Configuring</a> section.</p>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>

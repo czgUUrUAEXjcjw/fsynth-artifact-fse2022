@@ -1,0 +1,37 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2022-01-16T19:38:33.444734Z",
+      "format": null,
+      "last_modified": "2022-01-16T19:37:40.307947Z",
+      "mimetype": null,
+      "name": "ddmax.ipynb",
+      "path": "ddmax.ipynb",
+      "size": 12962,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2022-01-16T19:38:33.444734Z",
+      "format": null,
+      "last_modified": "2022-01-16T19:37:40.307947Z",
+      "mimetype": null,
+      "name": "fsynth.ipynb",
+      "path": "fsynth.ipynb",
+      "size": 12962,
+      "type": "notebook",
+      "writable": true
+    }
+  ],
+  "created": "2022-01-16T19:38:33.444734Z",
+  "format": "json",
+  "last_modified": "2022-01-16T19:38:33.444734Z",
+  "mimetype": null,
+  "name": "",
+  "path": "",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
